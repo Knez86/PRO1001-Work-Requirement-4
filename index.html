@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Product Rating Dashboard</title>
+</head>
+
+<body>
+
+    <a href="#main-content" class="skip-link">
+        Skip to main content
+    </a>
+
+    <header>
+        <h1>Product Rating Dashboard</h1>
+    </header>
+
+    <nav class="nav-links" aria-label="Main navigation">
+        <a href="#overview">Overview</a>
+        <a href="#category">Category ratings</a>
+        <a href="#topproducts">Top products</a>
+    </nav>
+
+    <main id="main-content" tabindex="-1">
+
+        <h2>Welcome to the Product Rating Dashboard!</h2>
+
+        <p class="dashboard-intro">
+            Explore product ratings and compare category performance
+            using data from the Fake Store API.
+        </p>
+
+        <p id="status-message" role="status" aria-live="polite">
+            Loading product data...
+        </p>
+
+        <section id="overview" class="overview-section">
+            <h3>Overview</h3>
+
+            <div class="cards-wrapper">
+
+                <div class="stat-card total-products-card">
+                    <h4>Total Products</h4>
+                    <p id="total-products">—</p>
+                </div>
+
+                <div class="stat-card average-rating-card">
+                    <h4>Average Rating</h4>
+                    <p id="average-rating">—</p>
+                </div>
+
+                <div class="stat-card total-categories-card">
+                    <h4>Total Categories</h4>
+                    <p id="total-categories">—</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="category" class="statistics category-section">
+            <h3>Category Ratings</h3>
+
+            <div id="category-chart"
+                 class="highchart category-container">
+            </div>
+
+            <p>
+                This chart displays the average product rating for each
+                category, allowing users to compare customer ratings
+                across different product categories.
+            </p>
+        </section>
+
+        <section id="topproducts" class="statistics top-products-section">
+            <h3>Top Rated Products</h3>
+
+            <div id="topproducts-chart"
+                 class="highchart topproducts-container">
+            </div>
+
+            <p>
+                This chart displays the five highest-rated products,
+                ranked from highest to lowest based on their customer
+                ratings.
+            </p>
+        </section>
+
+        <footer>
+            <p>
+                Data source:
+                <a href="https://fakestoreapi.com/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Fake Store API
+                </a>
+            </p>
+
+            <p>Frontend Essentials | Work Requirement 4</p>
+        </footer>
+
+    </main>
+
+    <!-- Highcharts libraries -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <!-- Dashboard JavaScript -->
+    <script src="./script.js"></script>
+
+</body>
+</html>
