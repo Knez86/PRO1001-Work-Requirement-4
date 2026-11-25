@@ -2,7 +2,7 @@
    1. API AND DOM REFERENCES
 ============================== */
 
-const apiUrl = "https://fakestoreapi.com/products/test";
+const apiUrl = "https://fakestoreapi.com/products";
 
 const totalProducts = document.getElementById("total-products");
 const averageRating = document.getElementById("average-rating");
